@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود / ثبت نام</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section id="bg-header">
+        <!-- start navbar -->
+        <div class="container">
+            <nav class="nav">
+                <!-- logo -->
+                <div class="logo-nav">
+                    <h2>MAX GYM</h2>
+                </div>
+                <!-- menu-link -->
+                <ul class="menu_item">
+                    <li><a href="./index.html">خانه</a></li>
+                    <li><a href="#about">درباره مکث</a></li>
+                    <li><a href="./mokamel.html"> مکمل</a></li>
+                    <li><a href="./bim.html">محاسبه BMI</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                    <li><a href="./login.html">ثبت نام / ورود</a></li>
+                </ul>
+                <div class="nav_toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- end navbar -->
+    <!-- login -->
+    <div class="login-page">
+        <div class="form">
+            <div class="icon-home">
+                <a href="index.html"><i class="fa fa-home"></i></a>
+            </div>
+            <!-- Start Register Form -->
+            <form class="register-form">
+                <input type="text" placeholder="نام شما" />
+                <input type="text" placeholder="پست الکترونیک" />
+                <input type="password" placeholder="رمز عبور" />
+                <button>تکمیل عضویت</button>
+                <p class="message">عضو سایت هستید؟ <a href="#">وارد شوید</a></p>
+            </form>
+            <!-- End Register Form -->
+
+            <!-- Start Login Form -->
+            <form class="login-form">
+                <input type="text" placeholder="پست الکترونیک" />
+                <input type="password" placeholder="رمز عبور" />
+                <button>ورود به ناحیه کاربری</button>
+                <p class="message">عضو نیستید؟ <a href="#">عضو شوید</a></p>
+            </form>
+            <!-- End Login Form -->
+        </div>
+    </div>
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="social">
+            <a href="#"> <i class="fa fa-instagram"></i></a>
+            <a href="#"> <i class="fa fa-telegram"></i></a>
+            <a href="#"> <i class="fa fa-facebook"></i></a>
+            <a href="#"> <i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="cap-footer">
+            <p>کلیه حقوق این سایت متعلق به آکادمی مکث می باشد</p>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.counterup.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
+        });
+    </script>
+    <script>
+        // login
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+        });
+    </script>
+</body>
+
+</html>

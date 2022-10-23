@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاخص توده بدنی</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .text-result {
+        display: none;
+    }
+
+    .show {
+        display: block;
+        margin-left: 4rem;
+        font-size: 15px;
+        padding-top: 1rem;
+    }
+</style>
+
+<body>
+    <section id="bg-header">
+        <!-- start navbar -->
+        <div class="container">
+            <nav class="nav">
+                <!-- logo -->
+                <div class="logo-nav">
+                    <h2>MAX GYM</h2>
+                </div>
+                <!-- menu-link -->
+                <ul class="menu_item">
+                    <li><a href="./index.html">خانه</a></li>
+                    <li><a href="#about">درباره مکث</a></li>
+                    <li><a href="./mokamel.html"> مکمل</a></li>
+                    <li><a href="./bim.html">محاسبه BMI</a></li>
+                    <li><a href="#contact">تماس با ما</a></li>
+                    <li><a href="./login.html">ثبت نام / ورود</a></li>
+                </ul>
+                <div class="nav_toggle">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <!-- end navbar -->
+    <!-- start bmi -->
+    <div class="holder">
+        <h5>محاسبه شاخص توده بدنی</h5>
+        <form>
+            <div class="form-item">
+                <label for="height">قد خود را وارد کنید(سانتی متر)</label>
+                <input type="text" name="height" id="height" minlength="2" maxlength="3">
+            </div>
+            <div class="form-item">
+                <label for="weight">وزن خود را وارد کنید(کیلو گرم)</label>
+                <input type="text" name="weight" id="weight" minlength="2" maxlength="3">
+            </div>
+            <button class="btn calculate ml-3">محاسبه</button>
+            <button class="btn reset">ریست</button>
+        </form>
+        <div class="text-result">میزان BMI بدن شما :</div>
+        <div class="result-massage ml-3 " style="margin-top: -22px;"></div>
+
+    </div>
+    <!-- end bmi -->
+    <!-- start footer -->
+    <footer class="footer">
+        <div class="social">
+            <a href="#"> <i class="fa fa-instagram"></i></a>
+            <a href="#"> <i class="fa fa-telegram"></i></a>
+            <a href="#"> <i class="fa fa-facebook"></i></a>
+            <a href="#"> <i class="fa fa-twitter"></i></a>
+        </div>
+        <div class="cap-footer">
+            <p>کلیه حقوق این سایت متعلق به آکادمی مکث می باشد</p>
+        </div>
+    </footer>
+    <!-- js -->
+    <script src="js/app.js"></script>
+    <script>
+        let btncalculate = document.querySelector('.calculate');
+        let btnreset = document.querySelector('.reset');
+        let outputresult = document.querySelector('.result-massage');
+        let text = document.querySelector('.text-result');
+        btncalculate.addEventListener('click', function (event) {
+            let height = document.getElementById('height').value;
+            let weight = document.getElementById('weight').value;
+            event.preventDefault();
+            let bmi = weight / (height / 100 * height / 100);
+            const finalbmi = (bmi.toFixed(2));
+            outputresult.innerHTML = finalbmi;
+            text.classList.add('show');
+        });
+        btnreset.addEventListener('click', function () {
+            Window.location.reload();
+        });
+    </script>
+</body>
+
+</html>
