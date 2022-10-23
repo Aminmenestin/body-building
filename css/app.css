@@ -485,9 +485,11 @@ th {
 }
 
 #contact {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-direction: row-reverse;
+    flex-direction: row-reverse; */
+    max-width: 500px;
+    margin: auto;
 }
 
 #formy {
@@ -515,12 +517,12 @@ th {
 }
 
 #formy input {
-    width: 282px;
+    width: 60%;
     margin-bottom: 20px;
 }
 
 #formy textarea {
-    width: 410px;
+    width: 100%;
     height: 230px;
 }
 
